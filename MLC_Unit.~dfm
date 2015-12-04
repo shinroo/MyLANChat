@@ -1,0 +1,75 @@
+object Form1: TForm1
+  Left = 127
+  Top = 132
+  BorderStyle = bsSingle
+  Caption = 'Form1'
+  ClientHeight = 208
+  ClientWidth = 259
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnActivate = FormActivate
+  OnDestroy = FormDestroy
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 8
+    Top = 184
+    Width = 31
+    Height = 13
+    Caption = 'Label1'
+  end
+  object Label2: TLabel
+    Left = 8
+    Top = 8
+    Width = 145
+    Height = 23
+    Caption = 'Rob'#39's LAN chat'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Edit1: TEdit
+    Left = 8
+    Top = 48
+    Width = 153
+    Height = 21
+    TabOrder = 0
+  end
+  object Button1: TButton
+    Left = 168
+    Top = 48
+    Width = 75
+    Height = 33
+    Caption = 'Send'
+    TabOrder = 1
+    OnClick = Button1Click
+  end
+  object Memo1: TMemo
+    Left = 8
+    Top = 88
+    Width = 241
+    Height = 89
+    Lines.Strings = (
+      '')
+    ScrollBars = ssVertical
+    TabOrder = 2
+  end
+  object NetCom1: TNetCom
+    BufferSize = 4256
+    LocalPort = 8876
+    ResendFreq = 2000
+    ResendCount = 16
+    LinkTimeout = 600
+    OnReceive = NetCom1Receive
+    Left = 264
+    Top = 8
+  end
+end
